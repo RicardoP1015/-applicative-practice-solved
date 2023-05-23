@@ -5,11 +5,13 @@ import { data } from "../data/data";
 // Return example: 132.53
 
 export function getAveragePlanetsTemperature(data) {
-  // Your code goes here...
+  // Your code goes here... {
+    const planets = data.planets;
+  const sum = planets.reduce((acc, planet) => acc + planet.avgTemp, 0);
+  const average = sum / planets.length;
+  return parseFloat(average.toFixed(3));
+
 }
-
-
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-13"
 // If the test has all tests passed, switch to the next exercise file
